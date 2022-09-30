@@ -1,0 +1,39 @@
+@import './color.css';
+@import './common.css';
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-row-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-row-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+.flex {
+    display: flex;
+}
+.flex-1 {
+    flex: 1;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+.ml-15 {
+    margin-left: 15px;
+}
+.mg-15 {
+    margin: 15px;
+}
