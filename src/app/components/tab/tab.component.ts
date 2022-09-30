@@ -11,7 +11,7 @@ export class TabComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  tabs = ['Tab 1', 'Tab 2'];
+  tabs = ['首页', 'Tab 2'];
   selectedIndex = 0;
 
   closeTab({ index }: { index: number }): void {
