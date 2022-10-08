@@ -3,7 +3,9 @@
     <ul nz-menu nzMode="inline" nzTheme="dark">
         <li nz-submenu [nzTitle]="menu.title" [nzIcon]="menu.icon" *ngFor="let menu of menuList">
             <ul>
-                <li *ngFor="let item of menu.childMenu" nz-menu-item>{{item.title}}</li>
+                <li *ngFor="let item of menu.childMenu" nz-menu-item [nzMatchRouter]="true">
+                    <a [routerLink]="[ item.path ]" (click)="clickMenu(item)">{{item.title}}</a>
+                </li>
             </ul>
         </li>
     </ul>

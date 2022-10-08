@@ -3,11 +3,17 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 const ngZorroModuleList = [
     NzLayoutModule,
     NzBreadCrumbModule,
     NzMenuModule,
     NzTabsModule,
-    NzCardModule
+    NzCardModule,
+    NzAvatarModule,
+    NzDropDownModule,
+    NzIconModule
 ]
 export default ngZorroModuleList

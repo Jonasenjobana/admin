@@ -1,8 +1,21 @@
 <nz-tabset
-      [(nzSelectedIndex)]="selectedIndex"
+      [(nzSelectedIndex)]="selectedTab"
       nzType="editable-card"
       nzHideAdd="true"
       (nzClose)="closeTab($event)"
+      [nzTabBarExtraContent]="extraTemplate"
     >
-      <nz-tab *ngFor="let tab of tabs;let i = index" [nzClosable]="i !== 0" [nzTitle]="tab"></nz-tab>
+      <nz-tab *ngFor="let tab of tabs;let i = index" (nzSelect)="clickTab(tab)" [nzClosable]="i !== 0" [nzTitle]="tab.title"></nz-tab>
     </nz-tabset>
+    <ng-template #extraTemplate>
+      <a nz-dropdown [nzDropdownMenu]="menu">
+        <span nz-icon nzType="caret-down"></span>
+      </a>
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu>
+          <li nz-menu-item (click)="refresh()"><span nz-icon nzType="reload" nzTheme="outline" class="mr-10"></span>刷新当前</li>
+          <li nz-menu-item><span nz-icon nzType="close" nzTheme="outline" class="mr-10"></span>关闭其他</li>
+          <li nz-menu-item><span nz-icon nzType="poweroff" nzTheme="outline" class="mr-10"></span>关闭所有</li>
+        </ul>
+      </nz-dropdown-menu>
+    </ng-template>

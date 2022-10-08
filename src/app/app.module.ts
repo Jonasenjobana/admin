@@ -16,18 +16,20 @@ import ngZorroModuleList from './config/ngZorroModule';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { HeadBarComponent } from './components/head-bar/head-bar.component';
 import { TabComponent } from './components/tab/tab.component';
-import { HomeComponent } from './views/home/home.component';
-
+import { ProductInfoComponent } from './module/product-info/product-info.component';
 
 registerLocaleData(zh);
 
+import { ProductModule } from './module/product/product.module'
+import { ProductInfoModule } from './module/product-info/product-info.module'
+import { HomeModule } from './module/home/home.module';
 @NgModule({
   declarations: [
     AppComponent,
     SideBarComponent,
     HeadBarComponent,
     TabComponent,
-    HomeComponent
+    ProductInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,9 @@ registerLocaleData(zh);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    HomeModule,
+    ProductInfoModule,
+    ProductModule,
     ...ngZorroModuleList
   ],
   providers: [
